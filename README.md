@@ -1,7 +1,10 @@
 # mini-notion
 
-Mini Notion clone: workspace, nested pages, block editor, full-text search,
-realtime collaboration and an AI chat that answers from your notes.
+A Notion-style workspace for **math teachers and Japanese learners**.
+Nested pages, block editor, full-text search and realtime collaboration, plus two features Notion does not have:
+
+1. **Step-by-step solution checker**: learners write a math solution line by line in LaTeX; the AI points to the first line that goes wrong and explains why, instead of only grading the final answer.
+2. **Vietnamese-Japanese bilingual notes**: paste Japanese text and the page adds furigana, breaks out grammar patterns, and generates spaced-repetition flashcards in place.
 
 ## Stack
 Next.js (TypeScript) · Postgres · Tailwind · pnpm workspaces
@@ -14,7 +17,7 @@ Next.js (TypeScript) · Postgres · Tailwind · pnpm workspaces
 | `packages/shared` | **Single source of truth for the API contract** (types + zod schemas) |
 | `packages/db` | Postgres schema and migrations |
 | `packages/realtime` | WebSocket / collaboration |
-| `packages/ai` | AI chat, embeddings, search |
+| `packages/ai` | Solution checker, furigana and grammar analysis, AI chat, search |
 | `tests/unit`, `tests/e2e` | Unit tests and Playwright e2e |
 | `docs` | Architecture notes and guides |
 
